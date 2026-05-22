@@ -1,0 +1,188 @@
+:root {
+    --page-bg: #0d1418;
+    --surface: #111a20;
+    --surface-soft: #162229;
+    --surface-muted: #1d2c33;
+    --primary: #40b294;
+    --primary-soft: #1f4f47;
+    --border: rgba(64, 178, 148, 0.22);
+    --text: #f1f7f8;
+    --muted: #9bb2b9;
+}
+
+body {
+    background: var(--page-bg) !important;
+    color: var(--text) !important;
+    font-family: Inter, Helvetica, Arial, sans-serif !important;
+}
+
+.stApp {
+    background: var(--page-bg) !important;
+}
+
+.block-container {
+    padding-top: 2rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.hero-section {
+    margin-bottom: 2rem;
+}
+
+.hero-copy {
+    max-width: 780px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.8rem, 3.4vw, 4.2rem);
+    line-height: 1.02;
+    margin: 0;
+    color: var(--text);
+}
+
+.hero-copy p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 760px;
+    margin-top: 1.1rem;
+}
+
+.hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+    padding: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-card h2 {
+    font-size: 2.15rem;
+    line-height: 1.08;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.hero-card p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.hero-tip {
+    color: var(--text);
+    background: var(--surface-soft);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1rem 1.2rem;
+    font-size: 0.98rem;
+}
+
+.form-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+    padding: 2rem;
+    margin-top: 1.5rem;
+}
+
+.stForm {
+    gap: 1.3rem !important;
+}
+
+input,
+textarea,
+select,
+.stTextInput>div>div>input,
+.stTextArea>div>div>textarea {
+    border: 1px solid rgba(64, 178, 148, 0.28) !important;
+    border-radius: 16px !important;
+    background: #121f26 !important;
+    color: #edf5f6 !important;
+    padding: 0.92rem 1rem !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Remove native dropdown arrow / overlays to avoid visual artifacts from browser UI or extensions */
+select,
+.stSelectbox>div>div>div[role="button"],
+.stSelectbox select {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background-image: none !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.9rem center !important;
+    padding-right: 1.1rem !important;
+}
+
+/* Ensure elements from browser extensions (e.g., Grammarly) sit behind inputs */
+input, textarea, select {
+    position: relative !important;
+    z-index: 1 !important;
+}
+.gr__tooltip, .grv_is_mobile, .gr_ {
+    z-index: 0 !important;
+}
+
+.stTextArea>div>div>textarea {
+    min-height: 150px !important;
+}
+
+.stButton>button {
+    background-color: var(--primary) !important;
+    color: #07130f !important;
+    border-radius: 14px !important;
+    border: none !important;
+    padding: 0.95rem 1.8rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 16px 30px rgba(64, 178, 148, 0.24) !important;
+}
+
+.stButton>button:hover {
+    background-color: #2f9e79 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text) !important;
+}
+
+label,
+.stMarkdown p,
+.stMarkdown li,
+.stTextInput label,
+.stTextArea label,
+.stSelectbox label {
+    color: var(--text) !important;
+}
+
+#MainMenu,
+footer,
+header {
+    visibility: hidden !important;
+}
+
+@media (max-width: 960px) {
+    .hero-card,
+    .form-card {
+        padding: 1.6rem !important;
+    }
+}
